@@ -15,10 +15,10 @@ IKS cluster can be provisioned using IBM Cloud dashboard portal or using Terrafo
 
 1.1 Using IBM Cloud dashboard
 
-Login into IBM Cloud dashboard portal using provided ID and Password
+Login into IBM Cloud dashboard portal and select Navigation Menu from top left corner of dashboard
 https://cloud.ibm.com
     ![plot](https://github.com/bkoohi/build-iks-cluster/blob/main/images/Screen%20Shot%202022-04-07%20at%204.50.07%20PM.png)
- Select Navigation Menu
+ 
  
         Select Kubernetes 
  
