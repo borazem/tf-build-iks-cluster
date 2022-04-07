@@ -64,8 +64,12 @@ https://cloud.ibm.com
                                       
   Portal will show status of your clustrer and it starts by: Preparing master, workers..
                         
+  You may need to create a Public Gateway in your VPC, if your cluster needs to access internet for downloading images or exposing services:
+  https://cloud.ibm.com/docs/vpc?topic=vpc-creating-vpc-resources-with-cli-and-api&interface=cli
   
-  1.2 Using terraform/CLI 
+  
+  1.2 Using terraform/CLI
+  
   
       
   
