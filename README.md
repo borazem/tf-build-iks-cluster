@@ -1,14 +1,11 @@
-# Auto scale for VPC
-
-With Auto Scale for VPC you can create an instance group to scale according to your requirements. Based on the target utilization metrics that you define, the instance group can dynamically add or remove instances to achieve your specified instance availability.
+# Deploy an IKS cluster in VPC
 
 Following the instructions and executing the scripts, you will provision
 
 - VPC
-- Subnets - one in each zone (zone 1 and zone 2)
-- VSI - one VSI in subnet-zone-1 to start with
-- Load balancer (backend pool and frontend listener)
-- Instance group using an instance template
+- Private Subnets - one in each zone (zone 1, 2 and 3)
+- Public gateway per subnet
+- IKS cluster
 
 ![](images/vpc-autoscale.png)
 
