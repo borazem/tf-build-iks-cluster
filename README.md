@@ -20,38 +20,34 @@ Following the instructions and executing the scripts, you will provision
 
 ### Getting started:
 
-1. Copy the Terraform variables template
-   ```sh
-   cp terraform.tfvars.template terraform.tfvars
-   ```
-2. Update the values in `terraform.tfvars` file based on your requirement and save the file. To understand the variables, refer `variables.tf` file.
+1- Clone this githup repository in your local system:
+```
+git clone git@github.com:bkoohi/build-iks-cluster.git
+```
+```
+cd build-iks-cluster
+```
+
+2. Update the values in `tvariables.tf` file based on your requirement and save the file. Minimum requirements are:
+"ibmcloud_api_key"
+"ssh_keyname"
+
 3. Initialize the Terraform providers. Run:
-   ```sh
+   ```
    terraform init
    ```
 4. Execute terraform plan :
-   ```sh
+   ```
    terraform plan
    ```
 5. Apply terraform plan:
-   ```sh
-   terraform apply
+   ```
+   terraform apply -auto-approve
    ```
 
-### SSL offloading (termination)
-
-For all incoming HTTPS connections, the load balancer service terminates the SSL connection and establishes a plain-text HTTP communication with the back-end server. CPU-intensive SSL handshakes and encryption/decryption tasks are shifted away from the back-end servers, allowing them to use all their CPU cycles for processing application traffic.
-
-   ![](images/vpc-autoscale-ssl-termination.png)
-
-### End-to-end encryption
-
-In this section, you will enable end-to-end encryption by creating a self-signed certificate in the VSI.You will use the [SSL installation script - install-software-ssl.sh](scripts/install-software-ssl.sh)
-
-   ![](images/vpc-autoscale-end-to-end-encryption.png)
 
 ### Clean-up
 
-```sh
-terraform destroy
+```
+terraform destroy  -auto-approve
 ```
